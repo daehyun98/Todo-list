@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body, html { 
   margin: 0;
   padding: 0;
@@ -8,11 +10,173 @@ header {
   justify-content: space-between;
   margin : 0.8rem;
 }
+.js-inputTodo {
+  width: 90%;
+}
+
+#js-todoButton {
+  cursor: pointer;
+}
+
+#js-qt {
+  cursor: pointer; 
+}
+
+.hiding {
+  display: none;
+}
+
+.checkClicked {
+  text-decoration: line-through;
+  color : gray;
+}
+/*푸터 시작*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin : 0.8rem;
+  color: white;
+}
+
+footer button {
+  
+  background: 0;
+  color: white;
+  border: 0;
+  font-size: 1.2rem;
+}
+
+footer button:focus {
+ outline: none;
+}
+.js-footTodolist {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  width: 320px;
+  height: auto;
+  color :white;
+  background-color: black;
+  border-radius: 1rem;
+  right: 1rem;
+  bottom: 3rem;
+}
+
+.js-footTodolist button {
+  width: 30%;
+  margin: auto;
+}
+
+.js-footTodolist header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 120%;
+  margin: 1rem;
+  border-bottom: white 0.05rem solid;
+  /* background-color: red; */
+} 
+
+.js-footTodolist header div{
+  cursor: default;
+} 
+
+.js-footTodolist header button {
+  cursor: pointer;
+  text-align: start;
+  margin: 0;
+  width: 1.5rem;
+  background: 0;
+  border: 0;
+  color: white;
+  font-size: 120%;
+}
+
+.js-footTodolist input {
+  margin: 1rem;
+  background: 0;
+  border: 0;
+  font-size: 100%;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.js-footTodolist input:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#js-askTodo {
+  height: 6rem;
+}
+
+#js-footContent {
+  height: auto;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#js-footContent button {
+  margin-top: 1rem;
+  background-color: gray;
+  border: 0;
+  border-radius: 2rem;
+  color: white;
+  height: 2rem;
+}
+
+#js-todolist {
+  text-align: left;
+  padding:  0 1rem 0 1rem;
+  margin: 0;
+}
+
+#js-todolist li{
+  cursor: default;
+  list-style: none;
+  text-align: left;
+  margin: 0;
+}
+
+#js-todolist li button{
+  display: none;
+}
+
+#js-todolist li:hover button{
+  display: inline-block;
+  height: auto;
+  border-radius: 0.5rem;
+  width: 1rem;
+  margin: 0;
+}
+
+#js-todolist li:hover button:hover{
+  cursor: pointer;
+}
+
+#js-todolist li input{
+  margin: 0.3rem 0.7rem 0.3rem 0.7rem;
+}
+
+.js-inputTodo {
+  width: 90%;
+}
+
+#js-todoButton {
+  cursor: pointer;
+}
+/*푸터 끝*/
 #menu > a {
   color: white;
   height: 5rem;
   font-size: 20px;
   text-align: right;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: font-size 0.3s;
+}
+#menu > a:hover {
+  font-size: 30px;
 }
 .hidden {
   display: none;
@@ -90,6 +254,9 @@ header {
     font-size: 25px;
     text-align: right;
   }
+  #menu > a:hover {
+    font-size: 30px;
+  }
   #login-form input {
     width: 50%;
     font-size: 50px;
@@ -109,6 +276,9 @@ header {
     font-size: 20px;
     text-align: right;
   }
+  #menu > a:hover {
+    font-size: 25px;
+  }
   #login-form input {
     width: 50%;
   font-size: 30px;
@@ -126,6 +296,9 @@ header {
     height: 5rem;
     font-size: 5px;
     text-align: right;
+  }
+  #menu > a:hover {
+    font-size: 10px;
   }
   #login-form input {
     width: 50%;

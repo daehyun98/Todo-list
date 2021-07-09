@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/background.css">
     <link rel="stylesheet" href="css/clock.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Momentum App</title>
   </head>
   <body>
+    <!-- 헤더 -->
     <header>
       <form id='js-search' class="search">
           <input class="search-input">
       </form>
       <div id="menu">
-        <a href="#"><span>캘린더</span></a>
+        <a href="fullcalendar.html"><span>캘린더</span></a>
         <a href="#"><span>일정</span></a>
         <a href="#"><span>동기부여</span></a>
       </div>
     </header>
-
+    <!-- 시계 -->
     <h2 id="clock" class="hidden">00:00:00</h2>
+    <!--로그인 창-->
     <form class="hidden" id="login-form">
       <input
         required
@@ -32,20 +35,44 @@
       <input type="submit" value="Log In" />
     </form>
     <h1 class="hidden" id="greeting"></h1>
+    <!-- 날씨 -->
     <div id="weather" class="hidden">
       <span></span>
       <span></span>
     </div>
-    
+    <!-- todo-list -->
     <form id="todo-form" class="hidden">
       <input type="text" placeholder="메모장" required />
     </form>
     <ul id="todo-list" ></ul>
+
+    <footer>
+      <button id = "js-qt" style="font-size: 40px;"> <i class="fab fa-github"></i> </button>
+      <div> 포트폴리오 1차 <br>
+              Todo-list </div>
+      <button id = "js-todoButton"> Todo </button>
+
+
+  <div class="js-footTodolist hiding" >
+      <header>
+          <div>Inbox</div>
+          <button class="js-closeFootTodoButton">×</button>
+      </header>
+      
+      <div id="js-footContent">
+          <div id = "js-askTodo">
+              <div>Add a todo to get started</div>
+              <button>New Todo</button>     
+          </div>
+          <ol id = "js-todolist" class="hiding"></ol>
+      </div>
+      <form>
+          <input class="js-inputTodo hiding" placeholder="New Todo">
+      </form>
+  </div> 
+  </footer>
+    <!-- 명언 -->
     <!-- <div id="quote"  class="hidden">
-      <span></span>
-      <span></span>
-    </div> -->
-    <!-- <div id="weather" class="hidden">
       <span></span>
       <span></span>
     </div> -->
@@ -56,5 +83,6 @@
     <script src="js/todo.js"></script>
     <script src="js/search.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/footTodo.js"></script>
   </body>
 </html>
