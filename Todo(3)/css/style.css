@@ -1,9 +1,4 @@
 
-header {
-  display: flex;
-  justify-content: space-between;
-  margin : 0.8rem;
-}
 #menu > a {
   color: white;
   height: 5rem;

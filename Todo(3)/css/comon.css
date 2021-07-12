@@ -12,3 +12,51 @@ ul { list-style: none; }
 body, html { 
     height: 100%;
 }
+
+/*헤더*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+#menu {
+    position: fixed; 
+    top: 0; 
+    left: 100; 
+    right: 0; 
+    bottom: 0; 
+    overflow: auto;
+}
+
+#menu > a {
+    color: white;
+    
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: ghostwhite;
+
+}
+#js-qt {
+    cursor: pointer; 
+  }
+footer button { 
+    background: 0;
+    color: red;
+    border: 0;
+    font-size: 1.2rem;
+}
+
+  footer button:focus {
+   outline: none;
+  }
+#footer_introduce {
+text-align: center;
+}
+

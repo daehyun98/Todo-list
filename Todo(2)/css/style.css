@@ -298,7 +298,7 @@ footer button:focus {
     text-align: right;
   }
   #menu > a:hover {
-    font-size: 10px;
+    font-size: 12px;
   }
   #login-form input {
     width: 50%;
