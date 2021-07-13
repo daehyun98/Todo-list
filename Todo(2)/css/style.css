@@ -41,7 +41,7 @@ footer {
 }
 
 footer button {
-  
+  text-align: left;
   background: 0;
   color: white;
   border: 0;
