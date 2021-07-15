@@ -23,9 +23,13 @@ function paintToDo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  button.innerText = "Ⅹ";
   button.addEventListener("click", deleteToDo);
   li.appendChild(span);
+  //클릭 시 줄 그어지는거
+  li.addEventListener('click', function(){
+    li.style.textDecoration = "line-through";
+})
   li.appendChild(button);
   toDoList.appendChild(li);
 }

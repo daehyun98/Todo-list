@@ -1,0 +1,25 @@
+#todo-form {
+    text-align: center;
+    color:white;
+}
+#todo-form > input {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    background: 0;
+    border: 2px solid #fff;
+    font-weight: 200px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    line-height: 120%;
+    margin-top: 0.4rem;
+}
+#todo-form > input::placeholder {
+    color: beige;
+}
+#todo-list {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}

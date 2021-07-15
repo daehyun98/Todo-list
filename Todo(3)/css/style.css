@@ -1,3 +1,13 @@
+
+/* #menu > a {
+  color: white;
+  height: 5rem;
+  font-size: 20px;
+  text-align: right;
+}
+.hidden {
+  display: none;
+} */
 /*로그인 인풋*/
 #login-form {
   text-align: center;
