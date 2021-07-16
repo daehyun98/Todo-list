@@ -12,10 +12,10 @@
   <body>
 <!--헤더-->
     <header>
-      <form id='js-search' class="search">
+      <form id='js-search' class="search hidden">
           <input class="search-input">
       </form>
-      <div id="menu">
+      <div id="menu" class="hidden">
         <a href="#"><span>캘린더</span></a>
         <a href="#"><span>일정</span></a>
         <a href="#"><span>동기부여</span></a>
@@ -42,6 +42,7 @@
 <!--투두리스트-->    
     <form id="todo-form" class="hidden">
       <input type="text" placeholder="메모장" required />
+      <button id="alldel">전체삭제</button>
     </form>
     <ul id="todo-list" ></ul>
 
@@ -51,10 +52,10 @@
 <footer>
 <!--푸터 깃허브 아이콘-->
 <form>  
-<button id = "js-qt" style="font-size: 20px;"> <i class="fab fa-github fa-2x" ></i> </button>
+<button id = "js-qt" class="hidden" style="font-size: 20px;"> <i class="fab fa-github fa-2x" ></i> </button>
 </form>
 <!--푸터 투두리스트-->          
-  <!-- <button id = "js-todoButton"> Todo </button>
+  <!-- <button id = "js-todoButton"> Todo </button> 
     <div class="js-footTodolist hiding" >
       <div>Inbox</div>
       <button class="js-closeFootTodoButton">×</button>
@@ -69,7 +70,7 @@
   <form>
       <input class="js-inputTodo hiding" placeholder="New Todo">
   </form>
-</div>  -->
+</div> -->
 </footer>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
@@ -78,5 +79,6 @@
     <script src="js/todo.js"></script>
     <script src="js/search.js"></script>
     <script src="js/weather.js"></script>
+    <!-- <script src="js/footTodo.js"></script> -->
   </body>
 </html>
