@@ -13,6 +13,8 @@
   #clock {
     width: 100%;
     font-size: 170px;
+    margin-top: 15%;
+    margin-bottom: 100px;
 
   }
 }
@@ -22,6 +24,7 @@
   #clock {
     width: 100%;
     font-size: 100px;
+    margin-top: 20%;
   }
 }
 
@@ -30,5 +33,6 @@
   #clock {
     width: 100%;
     font-size: 70px;
+    margin-top: 25%;
   }
 }

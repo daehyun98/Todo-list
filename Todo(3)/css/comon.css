@@ -11,6 +11,7 @@ ul { list-style: none; }
 
 body, html { 
     height: 100%;
+    position: relative;
 }
 /*로그인폼 빼고 숨기기*/
 .hidden {
@@ -55,6 +56,16 @@ footer {
 }
 #js-qt {
     cursor: pointer; 
+    padding: 10px;
+}
+#js-qt a {
+  color:white;
+}
+/*명언*/
+#quote {
+  color: white;
+  text-align: right;
+  margin-right: 10px;
 }
 footer button { 
     background: 0;
@@ -138,4 +149,5 @@ color: white;
   .search-input {
     width: 100px;
   }
+  
 }

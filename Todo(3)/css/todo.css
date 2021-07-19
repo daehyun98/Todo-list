@@ -7,7 +7,7 @@
     margin: 0 auto;
     width: 300px;
     background: 0;
-    border: 2px solid #fff;
+    border-bottom: 2px solid #fff;
     font-weight: 200px;
     text-align: center;
     color: white;
@@ -16,7 +16,7 @@
     margin-top: 0.4rem;
 }
 #todo-form > input::placeholder {
-    color: beige;
+    color: white;
 }
 #todo-list {
     text-align: center;
