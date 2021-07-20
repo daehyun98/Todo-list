@@ -5,20 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/motivation.css">
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <ul class="slider">
-                <li class="item">1st</li>
-                <li class="item">2nd</li>
-                <li class="item">3rd</li>
-            </ul>
+    <h2 style="text-align:center">동기 부여</h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="http://placehold.it/500x100" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="http://placehold.it/500x100" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="http://placehold.it/500x100" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="http://placehold.it/500x100" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="http://placehold.it/500x100" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="http://placehold.it/500x100" style="width:100%" onclick="currentSlide(1)"
+                alt="The Woods">
         </div>
-        <div class="btn">
-            <a class="prev" style="text-decoration: none;">&#10094;</a>
-            <a class="next" style="text-decoration: none;">&#10095;</a>
+        <div class="column">
+            <img class="demo cursor" src="http://placehold.it/500x100" style="width:100%" onclick="currentSlide(2)"
+                alt="Trolltunga, Norway">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="http://placehold.it/500x100" style="width:100%" onclick="currentSlide(3)"
+                alt="Mountains and fjords">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="http://placehold.it/500x100" style="width:100%" onclick="currentSlide(4)"
+                alt="Northern Lights">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="http://placehold.it/500x100" style="width:100%" onclick="currentSlide(5)"
+                alt="Nature and sunrise">
         </div>
     </div>
+</div>
+        <script src="../js/motivation.js"></script>
 </body>
 </html>
