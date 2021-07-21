@@ -23,7 +23,7 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `안녕하세요 ${username} 님`;
+  greeting.innerText = '안녕하세요' + username + '님';
   greeting.classList.remove(HIDDEN_CLASSNAME);
   time.classList.remove(HIDDEN_CLASSNAME);   //시계
   todoForm.classList.remove(HIDDEN_CLASSNAME);  //투두리스트

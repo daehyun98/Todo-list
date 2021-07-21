@@ -6,7 +6,7 @@
   color: #ffffff;
   font-size: 170px;
   font-weight: 600;
-  transition: color 0.5s ease-in-out;
+  /* transition: color 0.5s ease-in-out; */
 }
 /* PC (해상도 1024px)*/
 @media all and (min-width:1024px) { 

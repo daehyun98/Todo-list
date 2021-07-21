@@ -22,19 +22,45 @@ img {
   width: 300px;
   background: 0;
   border-bottom: 2px solid #fff;
-  font-weight: 200px;
   text-align: center;
   color: white;
   font-size: 15px;
   line-height: 120%;
-  margin-top: 0.4rem;
+  margin-top: 10px;
 }
-#todo-form > input::placeholder {
-  color: white;
-}
+
 #todo-list {
   text-align: center;
   color: white;
   cursor: pointer;
+}
+/*헤더 돋보기*/
+#js-search { /*돋보기 구석에서 패딩10*/
+  padding: 10px 10px;
+  float: left;
+}
+.search span{
+  color: rgb(192, 167, 167);
+  margin-right:10px;  
+}
+/*미디어쿼리 추가해야함 width 조정*/
+.search-input{
+  height: 20px;
+  width: 200px;
+  background: 0;
+  border: 0;
+  color: white;
+  font-size: 120%;  
+  background: url("../img/magnifying-glass\ \(1\).png") no-repeat scroll ;
+  padding-left:30px;
+}
+.search-input:focus{
+  outline: none;
+  border-bottom: white solid thin;
+  color: white;
+}
+.search-input:hover{
+  border-bottom: white solid thin;
+  color: white;
 }
 

@@ -6,6 +6,7 @@
     font-family: 'Gamja Flower', cursive; 
     /* font: normal 13px 'Arial'; */
     /* font-family: 'Jua', sans-serif; */
+    overflow: hidden;
 }
 a { text-decoration: none !important; }
 img { border: 0; }

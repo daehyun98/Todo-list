@@ -20,8 +20,8 @@ header {
     text-decoration: none;
     color: white;
     margin-top: 10px;
-    transition-property: background-color, color;
-    transition-duration: 1s;
+    transition-property:all background-color, color;
+    transition-duration: width 1s;
     transition-timing-function: ease-out;
 }
 #header .main_title  a:hover {
