@@ -60,6 +60,8 @@ footer {
 #js-qt {
     cursor: pointer; 
     padding: 10px;
+    color: white;
+    float: left;
 }
 #js-qt a {
   color:white;
@@ -111,6 +113,11 @@ color: white;
   .search-input {
     width: 200px;
   }
+  #greeting {
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+}
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
@@ -132,6 +139,11 @@ color: white;
   .search-input {
     width: 150px;
   }
+  #greeting {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+}
 }
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 @media all and (max-width:767px) {
@@ -150,7 +162,12 @@ color: white;
     font-size: 70px;
   }
   .search-input {
-    width: 100px;
+    width: 80px;
   }
+  #greeting {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+}
   
 }
