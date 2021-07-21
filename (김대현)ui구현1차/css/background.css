@@ -1,0 +1,69 @@
+/*백그라운드 이미지*/
+img {
+  min-height: 100%;
+  min-width: 280px;
+
+  width: 100%;
+  height: auto;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/*투두리스트*/
+#todo-form {
+  text-align: center;
+  color:white;
+}
+#todo-form > input {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  background: 0;
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  line-height: 120%;
+  margin-top: 10px;
+}
+
+#todo-list {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+#todo-list li {
+  font-size: 30px;
+}
+/*헤더 돋보기*/
+#js-search { /*돋보기 구석에서 패딩10*/
+  padding: 10px 10px;
+  float: left;
+}
+.search span{
+  color: rgb(192, 167, 167);
+  margin-right:10px;  
+}
+/*미디어쿼리 추가해야함 width 조정*/
+.search-input{
+  height: 20px;
+  width: 200px;
+  background: 0;
+  border: 0;
+  color: white;
+  font-size: 120%;  
+  background: url("../img/magnifying-glass\ \(1\).png") no-repeat scroll ;
+  padding-left:30px;
+}
+.search-input:focus{
+  outline: none;
+  border-bottom: white solid thin;
+  color: white;
+}
+.search-input:hover{
+  border-bottom: white solid thin;
+  color: white;
+}
+

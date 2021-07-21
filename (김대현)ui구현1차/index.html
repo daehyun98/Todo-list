@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/comon.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&display=swap" rel="stylesheet">
+    <title>ToDo-list</title>
+  </head>
+  <body>
+<!--헤더-->
+    <header>
+      <form id='js-search' class="search hidden">
+        <!-- <label for="search-input"></label> -->
+          <input type="text" class="search-input" title="search">
+      </form>
+      <div id="menu" class="hidden">
+        <a href="pages/calendar.html"><span>캘린더</span></a>
+        <a href="pages/todo_list.html"><span>일정</span></a>
+        <a href="pages/motivation.html"><span>동기부여</span></a>
+      </div>
+    </header> 
+<!--시계--> 
+<div id="main_content">
+   <div> <h2 id="clock" class="hidden">00:00:00</h2></div>
+<!--로그인폼-->    
+    <form class="hidden" id="login-form"> 
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="아이디를 입력하세요."
+        title="아이디창"
+      />
+      <input type="submit" value="Log In"/>
+    </form>
+    <p class="hidden" id="greeting"></p> 
+<!--날씨-->    
+    <div id="weather" class="hidden">
+      <span></span>
+      <span></span>
+    </div>
+<!--투두리스트-->    
+    <form id="todo-form" class="hidden">
+      <input type="text" title="메모장" placeholder="메모장" required />
+    </form>
+    <ul id="todo-list" ></ul>
+  </div>   
+<!--푸터  소개--> 
+    <div id="footer_introduce" class="hidden"> 포트폴리오 1차 <br>
+      Todo-list </div>
+<footer>
+<!--푸터 깃허브 아이콘-->  
+<a href="https://github.com/daehyun98?tab=repositories" id="js-qt" class="hidden" style="font-size: 20px;"><i class="fab fa-github fa-2x" ></i></a>
+<!--푸터 투두리스트-->          
+  <!-- <button id = "js-todoButton"> Todo </button> 
+    <div class="js-footTodolist hiding" >
+      <div>Inbox</div>
+      <button class="js-closeFootTodoButton">×</button>
+  
+  <div id="js-footContent">
+      <div id = "js-askTodo">
+          <div>Add a todo to get started</div>
+          <button>New Todo</button>     
+      </div>
+      <ol id = "js-todolist" class="hiding"></ol>
+  </div>
+  <form>
+      <input class="js-inputTodo hiding" placeholder="New Todo">
+  </form>
+</div> -->
+    <div id="quote"  class="hidden">
+      <span></span><br>
+      <span></span>
+    </div> 
+</footer>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/weather.js"></script>
+    <!-- <script src="js/footTodo.js"></script> -->
+  </body>
+</html>

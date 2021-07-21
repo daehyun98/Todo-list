@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        일정
+    </title>
+    <link rel="stylesheet" type="text/css" href="../css/todo_list.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+               <div class="title">
+               <a href="../index.html">To do list</a> 
+            </div>
+            <div class="clock">
+                
+            </div>
+            <div id="menu" class="main_menu" >
+                <a href="calendar.html"><span>캘린더</span></a>
+                <a href="#"><span>일정</span></a>
+                <a href="motivation.html"><span>동기부여</span></a>
+              </div>
+        </header>
+        <div id="box-container">
+            <div class="box">
+                <div class="sec-tit">
+                    <p>
+                        오늘 할 일
+                    </p>
+                </div>
+                <div class="enter-task">
+                    <input type="text" placeholder="할 일을 입력하세요" title="일정"  class="inputTask" autofocus>
+                    <button class="addTask">입력</button>
+                </div>
+                <button class="a-delete">전체 삭제</button>
+                <ul class="task-list">
+
+                </ul>
+            </div>
+            <div class="box">
+                <div class="sec-tit done-list">
+                    <p>
+                        완료!
+                    </p>
+                </div>
+                <button class="a-delete done">전체 삭제</button>
+                <ul class="task-list done">
+
+                </ul>
+            </div>
+        </div>
+        <footer id="footer">
+            <p>
+               <strong>github</strong>
+            </p>
+            <p>
+                <a href="https://github.com/daehyun98?tab=repositories" target=_blank title="깃허브">
+                    <span class="logo github"> <i class="fab fa-github fa-2x"></i></span>
+                </a>
+            </p>
+        </footer>
+    </div>
+    <script src="../js/todo_list.js"></script>
+</body>
+
+</html>

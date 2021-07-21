@@ -1,0 +1,25 @@
+#login-form {
+    text-align: center;
+    font-size: 40px;
+    cursor: default;
+    margin-top: 300px;
+}
+#login-form input {
+    display: block;
+    margin: 0 auto;
+    width: 480px;
+    background: 0;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    font-weight: 30px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    line-height: 120%;
+    margin-top: 10px;
+}
+#greeting {
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+}
