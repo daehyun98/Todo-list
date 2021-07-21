@@ -1,6 +1,6 @@
 #login-form {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 20px;
     cursor: default;
     margin-top: 300px;
 }
@@ -14,9 +14,9 @@
     font-weight: 500;
     text-align: center;
     color: white;
-    font-size: 2.5rem;
+    font-size: 25px;
     line-height: 120%;
-    margin-top: 0.4rem;
+    margin-top: 10px;
 }
 #greeting {
     text-align: center;
