@@ -81,6 +81,7 @@ header, footer {
     transition-property: background-color, color;
     transition-duration: 1s;
     transition-timing-function: ease-out;
+    margin-right: 10px;
 }
 .main_menu > a:hover {
     transition-property: background-color, color;
