@@ -22,12 +22,12 @@ if (!String.prototype.padStart) {
 const clock = document.querySelector("h2#clock");
 
 function getClock() {
-  const date = new Date();
-  const hours = String(date.getHours()).padStart(2, "0");
-  const minutes = String(date.getMinutes()).padStart(2, "0");
-  const seconds = String(date.getSeconds()).padStart(2, "0");
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, "0");  //문자열 추가 
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
   // 백틱 기호 못써서 바꿈
-  clock.innerText = hours+":"+minutes+":"+seconds;
+    clock.innerText = hours+":"+minutes+":"+seconds;
 }
 
 getClock();

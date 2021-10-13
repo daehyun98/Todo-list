@@ -10,7 +10,6 @@ const magnifying = document.querySelector(".search");
 const menu = document.querySelector("#menu");
 const icon = document.querySelector("#js-qt");
 
-
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
