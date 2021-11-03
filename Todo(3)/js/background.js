@@ -10,3 +10,12 @@ bgImage.alt = 'bgimg';
 // `img/${chosenImage}`;
 
 document.body.appendChild(bgImage);
+
+// const images = ["0,jpeg", "1.jpeg", "2.jpeg"];
+
+// function rendomImage(){
+//     const number = Math.floor(Math.random()*images.length);
+//     return number;
+// }
+
+// const bgImage = document.createElement("img");
