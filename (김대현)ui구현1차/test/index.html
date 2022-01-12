@@ -10,31 +10,63 @@
   background-color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
 }
-.main{
-  width: 100%;
-  display: block;
-  background: #ababab;
+.main {
+    width: 100%;
+    display: block;
+    border: 2px solid red;
 }
-.content-wrap{
-  width: 100%;
-  margin:0 auto;
-  border: 4px solid rgba(161, 161, 161, 0.5); 
-  border-radius: 20px;
-  overflow: hidden;
-  background: #ddaf35;
+.content-wrap {
+    width: 100%;
+    border: 2px solid blue;
+    overflow: hidden;
 }
-
+.left-content {
+    width: 100%;
+    float: left;
+    border: 2px solid orange;
+}
+.right-content {
+    float: left;
+    width: 90%;
+    border: 2px solid orchid;
+}
     </style>
 </head>
 <body>
     <div class="main">
+        <h1>main</h1>
         <div class="content-wrap">
+            <h1>content-wrap</h1>
             <div class="left-content">
+                <h1>left-content</h1>
                 <input type="text"> 
-                <button></button>
+                <button>확인</button>
             </div>
             <div class="right-content">
-                <table>1</table>                
+                <h1>right-content</h1>
+                <table id="calendar">
+                    <thead>
+                      <tr class="btn-wrap clearfix">
+                        <td>
+                          <label id="prev"> &#60; </label>
+                        </td>
+                        <td id="current-year-month" colspan="5"></td>
+                        <td>
+                          <label id="next"> &#62; </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="sun">Sun</td>
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td class="sat">Sat</td>
+                      </tr>
+                    </thead>
+                    <tbody id="calendar-body" class="calendar-body"></tbody>
+                  </table>              
             </div>
         </div>
     </div>
@@ -73,5 +105,47 @@
             </div>
         </div>
     </div> -->
+    <script>
+      
+var currentTitle = document.getElementById('current-year-month');
+var calendarBody = document.getElementById('calendar-body');
+var today = new Date();
+var first = new Date(today.getFullYear(), today.getMonth(),1);
+var dayList = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var monthList = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+var leapYear=[31,29,31,30,31,30,31,31,30,31,30,31];
+var notLeapYear=[31,28,31,30,31,30,31,31,30,31,30,31];
+var pageFirst = first;
+var pageYear;
+if(first.getFullYear() % 4 === 0){
+    pageYear = leapYear;
+}else{
+    pageYear = notLeapYear;
+}
+
+function showCalendar(){
+    let monthCnt = 100;
+    let cnt = 1;
+    for(var i = 0; i < 6; i++){
+        var $tr = document.createElement('tr');
+        $tr.setAttribute('id', monthCnt);   
+        for(var j = 0; j < 7; j++){
+            if((i === 0 && j < first.getDay()) || cnt > pageYear[first.getMonth()]){
+                var $td = document.createElement('td');
+                $tr.appendChild($td);     
+            }else{
+                var $td = document.createElement('td');
+                $td.textContent = cnt;
+                $td.setAttribute('id', cnt);                
+                $tr.appendChild($td);
+                cnt++;
+            }
+        }
+        monthCnt++;
+        calendarBody.appendChild($tr);
+    }
+}
+showCalendar();
+    </script>
 </body>
 </html>
