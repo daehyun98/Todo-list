@@ -110,12 +110,12 @@
             height: 290px;
         }
 
-        .sec_cal .cal_wrap .day:nth-child(7n -1) {
-            color: #3c6ffa;
+        .sec_cal .cal_wrap .day:nth-child(7n -6) {
+            color: #ed2a61;
         }
 
         .sec_cal .cal_wrap .day:nth-child(7n) {
-            color: #ed2a61;
+            color: #3c6ffa;
         }
 
         .sec_cal .cal_wrap .day.disable {
@@ -133,13 +133,13 @@
         </div>
         <div class="cal_wrap">
             <div class="days">
+                <div class="day">SUN</div>
                 <div class="day">MON</div>
                 <div class="day">TUE</div>
                 <div class="day">WED</div>
                 <div class="day">THU</div>
                 <div class="day">FRI</div>
                 <div class="day">SAT</div>
-                <div class="day">SUN</div>
             </div>
             <div class="dates"></div>
         </div>
@@ -161,6 +161,7 @@
         function calendarInit() {
 
             // 날짜 정보 가져오기
+
             var date = new Date(); // 현재 날짜(로컬 기준) 가져오기
             var utc = date.getTime() + (date.getTimezoneOffset() * 60 * 1000); // uct 표준시 도출
             var kstGap = 9 * 60 * 60 * 1000; // 한국 kst 기준시간 더하기
