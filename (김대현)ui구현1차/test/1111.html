@@ -41,22 +41,6 @@
         var date = new Date();  // @param 전역 변수, today의 Date를 세어주는 역할
     
         /**
-         * @brief   이전달 버튼 클릭
-         */
-        function prevCalendar() {
-            this.today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
-            buildCalendar();    // @param 전월 캘린더 출력 요청
-        }
-    
-        /**
-         * @brief   다음달 버튼 클릭
-         */
-        function nextCalendar() {
-            this.today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
-            buildCalendar();    // @param 명월 캘린더 출력 요청
-        }
-    
-        /**
          * @brief   캘린더 오픈
          * @details 날짜 값을 받아 캘린더 폼을 생성하고, 날짜값을 채워넣는다.
          */

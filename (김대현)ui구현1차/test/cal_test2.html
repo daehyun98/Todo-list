@@ -44,12 +44,13 @@
             //new를 찍지 않아서 month는 +1을 더해줘야 한다. 
             tbCalendarYM.innerHTML = today.getFullYear() + "년 " + (today.getMonth() + 1) + "월";
 
+            //
             var tdC = document.getElementById("schedule");
             tbCalendar.addEventListener('click', function() {
                 var txt = prompt('제목 입력');
                 cell.innerHTML += txt;
             });
-
+            //
 
 
             var row = null;
