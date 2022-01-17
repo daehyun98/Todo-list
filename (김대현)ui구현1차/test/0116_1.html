@@ -29,5 +29,17 @@
             <div class="dates"></div>
         </div>
     </div>
+    <script>
+        const date = new Date();
+
+        const viewYear = date.getFullYear(); //년도와 월은 계속 사용해야 해서
+        const viewMonth = date.getMonth(); //메소드 호출보단 변수 두 개를 따로 만들었다
+        
+        document.querySelector('.year-month').innerHTML = `${viewYear}년 ${viewMonth + 1}월`; //쿼리셀렉터를 통해 year-month태그에 접근해 내용 채우기
+        
+        const prevLast = new Date(viewYear, viewMonth, 0);
+        const thisLast = new Date(viewYear, viewMonth + 1, 0);
+
+    </script>
 </body>
 </html>

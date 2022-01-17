@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="calendar">
+        <!-- 뒤에서 변수명을 주기 위해 아이디 생성-->
+          <thead>
+              <tr>
+              <td> <input type = "button" value = "<"/> </td>
+              <td colspan="3">year-month<td>
+              <td> <input type = "button" value = ">"/> </td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+              <td>일</td>
+              <td>월</td>
+              <td>화</td>
+              <td>수</td>
+              <td>목</td>
+              <td>금</td>
+              <td>토</td>
+              </tr>
+          </tbody>
+      </table>
+      <script type="text/javascript">
+        today = new Date();
+            //오늘 날짜
+        year = today.getFullYear();
+            //올 해
+        month = today.getMonth();
+            //이번 달
+        YM = year + "년" + (month+1) + "월"; 
+            // JS는 0~11월로 표시해서 +1을 해준다. (달력의 월을 표시해주기 위함)
+        document.getElementById("YM").innerHTML = YM;
+            //HEAD태그에 script를 두고하면 작동 안한다. body 맨 밑에서 할 것!
+        first_date = new Date(year,month,1).getDate();
+            // 이번달 첫째날 구하기
+        last_date = new Date(year,month+1,0).getDate();
+            // 이번달 마지막날 구하기 (다음달의 0번째 일은 이번달의 마지막날과 같다.)
+        first_day = new Date(year,month,1).getDay();
+            // 오늘 요일의 값 구하기(js는 요일을 숫자로 돌려준다.)
+            // 원하는 요일부터 1일이 출력되게 하기 위함
+
+            function makecalender(){
+	calendar = document.getElementById("calendar");
+		//calendar테이블을 변수로 정의
+	row = calendar.insertRow();
+		//calendar에 행을 추가해준다.
+		//변수명(row)을 지정해주는 이유 : 후에 cell이 추가될 자리를 알려주기 위해
+	for(i=0; i<first_day; i++){
+		//first_day에 해당하는 요일까지 열을 만든다.
+		//요일은 0부터 시작하기 때문에 i값도 0에서 시작한다.
+		cell = row.insertCell();
+      //cell.innerHTML = "HI";
+		
+	}
+            }
+
+for(i=1; i<=last_date; i++){
+	// 달력은 1일부터 시작하므로 i=1
+if(first_day != 7){
+	//first_day는 0~6이다. 일주일은 한 줄에 7칸이니까 7이상은 찍히지 않는다.
+	cell = row.insertCell();
+	//셀추가
+	cell.setAttribute('id', [i]);
+	//모든 셀에 id를 부여함
+	cell.innerHTML = [i];
+	//추가된 셀에 i값 입력
+	first_day += 1;
+	//요일값이 하루 추가된걸 for문에 알려줌
+}
+else{
+	//첫줄의 first_day 값이 7이되면 작동
+	row = calendar.insertRow();
+	//행을 하나 추가
+	cell = row.insertCell();
+	cell.setAttribute('id', [i]);
+	cell.innerHTML = [i];
+	//세줄은 위와 같음
+	first_day = first_day - 6;
+	//6을 빼는 이유는 매번 7에서 else문으로 넘어오고, if문이 6번만 하면 되기때문이다.
+	//7을 빼버리면 0부터 시작해서 if문이 7번 실행되고 else로 넘어오므로 -6을한다.
+	}
+}
+makecalender();
+	//테이블을 만든 후 색깔이 나와야하므로 테이블 생성 함수 호출
+	window.onload = function() {
+		today_date = today.getDate()
+			//오늘 날짜를 함수로 정의
+		for(i=1; i<=last_date; i++){
+		set_id = document.getElementById([i])
+			//오늘 날짜와 비교할 id정의
+		if( today_date == set_id.getAttribute('id')){
+			//오늘 날짜값과 달력 날짜의 id값 비교
+		set_id.bgColor = "red";
+          	//일치한 값에 색깔주기
+		}
+		}
+		}	
+    </script>
+</body>
+</html>
