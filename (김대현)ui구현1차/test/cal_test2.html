@@ -45,10 +45,9 @@
             tbCalendarYM.innerHTML = today.getFullYear() + "년 " + (today.getMonth() + 1) + "월";
 
             //
-            var tdC = document.getElementById("schedule");
             tbCalendar.addEventListener('click', function() {
                 var txt = prompt('제목 입력');
-                cell.innerHTML += txt;
+                cell.row.innerHTML += txt;
             });
             //
 
