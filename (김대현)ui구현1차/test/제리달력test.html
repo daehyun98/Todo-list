@@ -48,11 +48,24 @@
             <td class="sat">토</td>
         </tr>
     </table>
+    <div id="main-day"></div>
+    <div id="main-date"></div>
     
     <script>
         var today = new Date();//오늘 날짜//내 컴퓨터 로컬을 기준으로 today에 Date 객체를 넣어줌
         var date = new Date();//today의 Date를 세어주는 역할
+/////////////////////////
+//         var mainTodayDay = document.getElementById('main-day');
+//         var mainTodayDate = document.getElementById('main-date');
+//         function showMain() {
+//             mainTodayDay.innerHTML = today.getDay()-1;
+//             mainTodayDate.innerHTML = today.getDate();
+//         }
+//     showMain();
+//     //var clickedDate1 = document.getElementById(today.getDate());
+//    // clickedDate1.classList.add('active');
 
+////////////////////////
         function prevCalendar() {//이전 달
             today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate()); //년,월,일//getMonth()는 현재 달을 받아 오므로 이전달을 출력하려면 -1을 해줘야함
             buildCalendar(); //달력 cell 만들어 출력 
@@ -118,6 +131,24 @@
             }
         }
         buildCalendar();
+        function calendarChoiceDay(cell) {
+
+// @param 기존 선택일이 존재하는 경우 기존 선택일의 표시형식을 초기화 한다.
+if (document.getElementsByClassName("choiceDay")[0]) {
+    document.getElementsByClassName("choiceDay")[0].style.backgroundColor = "#FFFFFF";
+    document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");
+}
+
+// @param 선택일 체크 표시
+//cell.style.backgroundColor = "#FF9999";
+
+
+
+// @param 선택일 클래스명 변경
+
+cell.classList.add("choiceDay");
+}
+calendarChoiceDay();
     </script>
 </body>
 </html>
